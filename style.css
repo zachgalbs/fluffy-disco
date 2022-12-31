@@ -1,43 +1,59 @@
-input {
-    font-size: 20px
+body {
+    background-color: rgb(200, 200, 200);
 }
 
-
-.button-container {
+input {
+    font-size: 2.2vh;
+    border-color: black;
+    margin: .2em;
+}
+.workout-button-container {
     text-align: center;
     display: flex;
     justify-content: center;
 }
-
-.button {
+#workoutButton {
+    position: absolute;
+}
+button {
     cursor: pointer;
     box-shadow: 10px 10px 15px;
     border-radius: 10px;
-    padding: 50px;
+    padding: 5vh;
     font-size: 20px;
     background-color: lightgray;
 }
-.button:hover {
+#startButton {
+    font-size: 25px;
+    opacity: 0;
+    transition: opacity 3s;
+}
+.start-button-container {
+    display: flex;
+    justify-content: center;
+}
+button:hover {
     opacity: 70%;
 }
-.button:active {
-    
+button:active {
+    opacity: 40%;
     margin-top: 5px;
     margin-left: 5px;
     box-shadow: 5px 5px 15px;
 }
 #workoutList {
-    margin-top: 10px;
+    margin-top: 100px;
     opacity: 0;
     border-style: solid;
+    border-width: 4px;
     display: grid;
     width: max-content;
-    grid-template-rows: repeat(6, 2vh);
+    grid-template-rows: repeat(6, vmax);
     transition: opacity 2s;
+    padding: .6vh;
 }
 #workoutListContainer {
-    margin-top: 40px;
-    border-style: solid;
+    margin: 2vh 0px 4vh 0px;
     display: flex;
     justify-content: center;
 }
